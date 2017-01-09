@@ -7,7 +7,7 @@ $(document).ready( function () {
   var content = document.getElementById('link-list');
   var divAnchors = content.getElementsByTagName('a');
 
-  // loop through all anchors and add animation class of 'unveil'
+  // loop through all anchors, animate and fadeIn each
     for(var i = 0; i < divAnchors.length; i++) {
 
       (function(i){
@@ -15,6 +15,6 @@ $(document).ready( function () {
             $(divAnchors[i]).animate({opacity: '1.0'}).fadeIn(1000);
         }, 200 * i);
       }(i)); // end wrapped function(i)
-    
+
     } // end for loop
 }); // end jq ready function
